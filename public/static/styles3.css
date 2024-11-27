@@ -1,0 +1,105 @@
+/* Reset and Base Styling */
+body {
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Main Container */
+.maincontainer {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Sidebar */
+.studentsidebar {
+    background: #00bcd4;
+    color: #fff;
+    padding: 30px;
+    width: 250px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.sidebarheader img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    margin: 15px 0;
+}
+
+.sidebarheader h2 {
+    color: black;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.sidebarheader h3 {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.sidebarmenu h2 {
+    color: #000;
+    font-size: 20px;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.menulist {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.menulist li {
+    margin-bottom: 10px;
+}
+
+.menulist li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+}
+
+.menulist li a:hover {
+    color: #000;
+}
+
+/* Main Section */
+main {
+    flex-grow: 1;
+}
+
+.maindashboard {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#totalClassesPresent, #totalPercentage {
+    flex: 1;
+    background: #fc2c56;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#totalClassesPresent h2, #totalPercentage h2 {
+    font-size: 24px;
+    color:black;
+    margin-bottom: 10px;
+}
+
+#totalClassesPresent h4, #totalPercentage h4 {
+    font-size: 22px;
+    color: black;
+    font-weight: bold;
+}
+
+

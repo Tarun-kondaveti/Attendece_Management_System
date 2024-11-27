@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Dashboard</title>
+    <link rel="stylesheet" href="styles5.css">
+</head>
+<body>
+    <div class="dashboard-container-faculty">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2>Faculty Details</h2>
+                <img src="icon.jpeg" alt="Faculty Icon" class="faculty-icon">
+                <h3>K. Chamundheswari</h3>
+                <h3>Lecturer ID: 2819801</h3>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Update Details</a></li>
+                <li><a href="#">Post Attendance</a></li>
+                <li><a href="#">View Attendance</a></li>
+                <li><a href="#">Log Out</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Section -->
+        <main>
+            <!-- Dashboard Content -->
+            <div class="dashboard-contant">
+                <div class="totalsubjects">
+                    <h2>Total Subjects</h2>
+                    <h4>2</h4>
+                </div>
+                <div class="totalclasses">
+                    <h2>Total Classes</h2>
+                    <h4>5</h4>
+                </div>
+            </div>
+
+            <!-- Post Attendance Section -->
+            <div id="postattendence">
+                <h2>Enter Class Details to Post Attendance</h2>
+                <input type="number" id="year" name="year" placeholder="Enter Year"><br><br>
+                <input type="text" id="sectionname" name="sectionname" placeholder="Enter Section"><br><br>
+                <input type="text" id="subjectname" name="subjectname" placeholder="Enter Subject"><br><br>
+                <button id="submit-btn" onclick="redirectToAttendancePage()">Submit</button>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        function redirectToAttendancePage() {
+            window.location.href = "attendEnce.html"; // Replace with the actual attendance page URL
+        }
+    </script>
+</body>
+</html>

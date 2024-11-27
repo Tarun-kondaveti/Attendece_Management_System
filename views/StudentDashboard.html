@@ -1,0 +1,69 @@
+<html>
+<head>
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="styles3.css">
+</head>
+<body>
+    <div class="maincontainer">
+        <div class="studentsidebar">
+            <div class="sidebarheader">
+                <h2>Student Details</h2>
+                <img src="icon.jpeg" alt="Student Icon">
+                <h3>Student ID: K.Tarun Kumar</h3>
+                <h3>Student Name: A22126511101</h3>
+                <h3>Year: 3</h3>
+                <h3>Section: B</h3>
+            </div>
+            <div class="sidebarmenu">
+                <h2>View Subject Wise:</h2>
+                <ul class="menulist">
+                    <li><a href="#" onclick="showSubjectDetails('Telugu')">Telugu</a></li>
+                    <li><a href="#" onclick="showSubjectDetails('Hindi')">Hindi</a></li>
+                    <li><a href="#" onclick="showSubjectDetails('English')">English</a></li>
+                    <li><a href="#" onclick="showSubjectDetails('Maths')">Maths</a></li>
+                    <li><a href="#" onclick="showSubjectDetails('Science')">Science</a></li>
+                    <li><a href="#" onclick="showSubjectDetails('Social')">Social</a></li>
+                </ul>
+            </div>
+        </div>
+        <main>
+            <div class="maindashboard">
+            <div id="totalClassesPresent">
+                <h2>Overall Classes Present</h2>
+                <h4>190/220</h4>
+            </div>
+            <div id="totalPercentage">
+                <h2>Overall Attendence Percentage</h2>
+                <h4>89%</h4>
+            </div>
+        </div>
+        </main>
+    </div>
+
+    <script>
+        // Data for each subject
+const subjectDetails = {
+    Telugu: { present: 45, total: 50, percentage: "90%" },
+    Hindi: { present: 42, total: 50, percentage: "84%" },
+    English: { present: 47, total: 50, percentage: "94%" },
+    Maths: { present: 48, total: 50, percentage: "96%" },
+    Science: { present: 44, total: 50, percentage: "88%" },
+    Social: { present: 43, total: 50, percentage: "86%" }
+};
+
+// Function to update the dashboard
+function showSubjectDetails(subject) {
+    const totalclasses= document.getElementById("totalClassesPresent");
+    const percentage = document.getElementById("totalPercentage");
+    const data = subjectDetails[subject];
+
+    totalclasses.innerHTML = `
+        <h2> Total Classes Present:</h2>
+        <h4> ${subject}: ${data.present}/${data.total}</h4>`;
+    percentage.innerHTML=` <h2>Attendence Percentage :</h2>
+        <h4> ${data.percentage}</h4>`;
+}
+
+    </script>
+</body>
+</html>
